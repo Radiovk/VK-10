@@ -1,0 +1,287 @@
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2'
+      class='v2'
+      expr:dir='data:blog.languageDirection'
+      xmlns='http://www.w3.org/1999/xhtml'
+      xmlns:b='http://www.google.com/2005/gml/b'
+      xmlns:data='http://www.google.com/2005/gml/data'
+      xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <meta content='VK Radio, salsa, africanos, vallenato y merengue en vivo 24/7' name='description'/>
+  <b:include data='blog' name='all-head-content'/>
+  <title>VK Radio - La del sonido imponente</title>
+
+  <b:skin><![CDATA[
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#02091d;color:#fff;font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .topnav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 3%;background:#020b25;border-bottom:2px solid #00d9ff;flex-wrap:wrap}
+    .brand{font-weight:900;color:#00d9ff;font-size:22px}
+    .navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;font-weight:bold}
+    .navlinks a:hover{color:#00d9ff}
+    .socials{display:flex;gap:8px}
+    .socials a{padding:9px;border-radius:9px;background:#0869e8;font-weight:bold}
+    .socials a:nth-child(2){background:#d9009c}
+    .socials a:nth-child(3){background:#08b85c}
+    .socials a:nth-child(4){background:#111}
+    .socials a:nth-child(5){background:#d90020}
+    .banner{width:100%;display:block;height:auto;border-bottom:3px solid #00d9ff}
+    .audio-strip{display:flex;align-items:center;gap:15px;padding:12px 4%;background:#020b25;border-bottom:1px solid #078bff}
+    .roundplay{width:44px;height:44px;flex-shrink:0;border:2px solid #00d9ff;border-radius:50%;background:#0056bd;color:white;font-size:20px;cursor:pointer}
+    .station{min-width:130px}
+    .station strong{display:block;font-size:17px}
+    .station small{color:#c7eaff}
+    .eq{display:flex;align-items:center;justify-content:center;gap:3px;flex:1;height:44px;overflow:hidden}
+    .eq i{width:4px;min-width:2px;height:20px;background:#00eaff;border-radius:4px;animation:bars .55s infinite alternate;box-shadow:0 0 8px #00d9ff}
+    .eq i:nth-child(3n){animation-delay:.2s}
+    .eq i:nth-child(4n){animation-delay:.35s}
+    .live{background:#f20c2e;padding:9px 13px;border-radius:20px;font-weight:bold;white-space:nowrap}
+    .layout{display:grid;grid-template-columns:205px minmax(0,1fr) 255px;gap:16px;padding:18px 2%;max-width:1500px;margin:auto}
+    .sidebar,.player,.right{border:1px solid #078bff;border-radius:15px;background:linear-gradient(140deg,#061b40,#02091d);box-shadow:0 0 16px #007bff22}
+    .sidebar{padding:12px;height:max-content}
+    .side-link{display:block;padding:15px 10px;border-radius:9px;font-weight:bold}
+    .side-link:hover{background:#005ac9}
+    .player{padding:20px;display:grid;grid-template-columns:minmax(160px,.85fr) minmax(0,1.2fr);gap:22px;align-items:center;min-width:0}
+    .disc-wrap{display:grid;place-items:center}
+    .disc{width:min(100%,255px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#06132d 0 58%,#1a4275 61%,#00d9ff 65%,#02091d 70%);border:5px solid #00d9ff;box-shadow:0 0 16px #00d9ff,0 0 35px #006cff;animation:spin 12s linear infinite}
+    .disc-logo{width:72%;height:72%;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 0 14px #00d9ff}
+    .player h1{font-size:clamp(28px,4vw,42px);margin:0}
+    .tagline{color:#00d9ff;font-size:clamp(16px,2vw,22px);font-weight:bold}
+    .genres{color:#d2ecff;font-weight:bold;margin:10px 0}
+    .mini-eq{height:58px;display:flex;align-items:end;gap:4px;margin:14px 0}
+    .mini-eq i{flex:1;min-width:2px;background:linear-gradient(#00f6ff,#087bff);border-radius:3px 3px 0 0;animation:bars .5s infinite alternate}
+    .mini-eq i:nth-child(2n){animation-delay:.2s}
+    .controls{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+    .controls button{cursor:pointer;border:0;color:#fff;background:transparent;font-size:21px}
+    .controls .play{width:54px;height:54px;border:3px solid #00d9ff;border-radius:50%;background:#0068d8;box-shadow:0 0 15px #00d9ff}
+    .volume{width:100%;accent-color:#00d9ff;margin-top:12px}
+    .status{text-align:right;color:#9eefff;font-size:12px;margin-top:8px}
+    .right{padding:12px;height:max-content}
+    .contact,.social-link,.site{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px;margin-bottom:9px;border-radius:11px;border:1px solid #00bfff;background:#031a3d;font-weight:bold}
+    .contact{background:#02392f}
+    .contact strong{font-size:20px;display:block}
+    .social-link:nth-child(2){background:#0869ed}
+    .social-link:nth-child(3){background:linear-gradient(90deg,#ff9800,#ed008c,#7500ee)}
+    .social-link:nth-child(4){background:#010d24}
+    .social-link:nth-child(5){background:#c80020}
+    .site{font-size:12px;overflow-wrap:anywhere}
+    .genrebar{display:grid;grid-template-columns:repeat(4,1fr);max-width:1450px;margin:0 auto 18px;border:1px solid #087bff;border-radius:13px;background:#020d2a}
+    .genreitem{padding:17px 10px;text-align:center;border-right:1px solid #0759a8}
+    .genreitem:last-child{border:0}
+    .genreitem b{display:block;color:#00d9ff;font-size:18px}
+    .genreitem small{color:#c3e5ff}
+    footer{text-align:center;padding:20px 10px;color:#a5ceff;border-top:1px solid #0759a8;font-size:13px}
+    @keyframes bars{from{height:8px}to{height:95%}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:950px){
+      .layout{grid-template-columns:1fr 240px}
+      .sidebar{display:none}
+      .player{grid-column:1;grid-row:1;grid-template-columns:1fr}
+      .right{grid-column:2;grid-row:1}
+      .disc{width:190px}
+    }
+    @media(max-width:650px){
+      .topnav{align-items:flex-start}
+      .navlinks{gap:10px;font-size:11px}
+      .brand{font-size:18px}
+      .audio-strip{gap:8px;padding:9px}
+      .station{min-width:95px}
+      .station strong{font-size:14px}
+      .station small{font-size:10px}
+      .live{font-size:10px;padding:7px}
+      .eq i{width:3px}
+      .layout{display:flex;flex-direction:column;padding:12px 3%}
+      .player{order:1;padding:15px}
+      .right{order:2}
+      .genrebar{grid-template-columns:repeat(2,1fr);margin:0 3% 15px}
+      .genreitem:nth-child(2){border-right:0}
+      .genreitem:nth-child(-n+2){border-bottom:1px solid #0759a8}
+    }
+  ]]></b:skin>
+</head>
+
+<body>
+
+  <header class='topnav' id='inicio'>
+    <a class='brand' href='#inicio'>VK RADIO</a>
+    <nav class='navlinks'>
+      <a href='#inicio'>⌂ INICIO</a>
+      <a href='#radio'>◉ RADIO EN VIVO</a>
+      <a href='#programacion'>♫ PROGRAMACIÓN</a>
+      <a href='#generos'>♪ MÚSICA</a>
+      <a href='#contacto'>✉ CONTACTO</a>
+    </nav>
+    <div class='socials'>
+      <a href='https://www.facebook.com/' aria-label='Facebook'>f</a>
+      <a href='https://www.instagram.com/' aria-label='Instagram'>◎</a>
+      <a href='https://wa.me/573043773535' aria-label='WhatsApp'>W</a>
+      <a href='https://www.tiktok.com/' aria-label='TikTok'>♪</a>
+      <a href='https://www.youtube.com/' aria-label='YouTube'>▶</a>
+    </div>
+  </header>
+
+  <!-- REEMPLAZA URL_PUBLICA_DEL_BANNER por la URL pública de tu banner original -->
+  <a href='#radio'>
+    <img class='banner'
+         src='https://i.postimg.cc/6ptNRfd5/WEB-STEREO-VK-1.jpg'
+         alt='VK Radio - La del sonido imponente - En vivo 24/7'/>
+  </a>
+
+  <section class='audio-strip' id='radio'>
+    <button class='roundplay' id='topPlay' type='button' aria-label='Reproducir'>▶</button>
+    <div class='station'>
+      <strong>VK Radio</strong>
+      <small>La del sonido imponente</small>
+    </div>
+    <div class='eq' id='topEq'></div>
+    <div class='live'>● EN VIVO 24/7</div>
+  </section>
+
+  <main class='layout'>
+    <aside class='sidebar'>
+      <a class='side-link' href='#inicio'>⌂ &nbsp; Inicio</a>
+      <a class='side-link' href='#radio'>◉ &nbsp; En vivo</a>
+      <a class='side-link' href='#programacion'>▦ &nbsp; Programación</a>
+      <a class='side-link' href='#generos'>♫ &nbsp; Música</a>
+      <a class='side-link' href='#contacto'>✉ &nbsp; Contacto</a>
+    </aside>
+
+    <section class='player'>
+      <div class='disc-wrap'>
+        <div class='disc'>
+          <!-- REEMPLAZA URL_PUBLICA_DEL_LOGO por la URL pública de tu logo original -->
+          <img class='disc-logo'
+               src='https://i.postimg.cc/HnkyVyBz/vk-(1).png'
+               alt='Logo original VK Radio'/>
+        </div>
+      </div>
+
+      <div class='player-info'>
+        <div class='live' style='display:inline-block'>● EN VIVO 24/7</div>
+        <h1>VK Radio</h1>
+        <div class='tagline'>La del sonido imponente</div>
+        <div class='genres'>Salsa • Africanos • Vallenato • Merengue</div>
+        <div class='mini-eq' id='miniEq'></div>
+
+        <div class='controls'>
+          <button id='muteButton' type='button' aria-label='Silenciar'>🔊</button>
+          <button id='restartButton' type='button' aria-label='Reiniciar'>↺</button>
+          <button class='play' id='playButton' type='button' aria-label='Reproducir'>▶</button>
+          <button id='liveButton' type='button' aria-label='Escuchar en vivo'>»</button>
+        </div>
+        <input class='volume' id='volume' type='range' min='0' max='1' step='0.05' value='0.8' aria-label='Volumen'/>
+        <div class='status' id='status'>● Listo para escuchar</div>
+
+        <audio id='radioAudio' preload='none'>
+          <source src='https://stream.zeno.fm/kk3x5cventzuv' type='audio/mpeg'/>
+        </audio>
+      </div>
+    </section>
+
+    <aside class='right' id='contacto'>
+      <a class='contact' href='https://wa.me/573043773535'>
+        <span>🟢 WhatsApp<strong>304 377 3535</strong></span><span>›</span>
+      </a>
+      <a class='social-link' href='https://www.facebook.com/'><span>f &nbsp; Facebook</span><span>›</span></a>
+      <a class='social-link' href='https://www.instagram.com/'><span>◎ &nbsp; Instagram</span><span>›</span></a>
+      <a class='social-link' href='https://www.tiktok.com/'><span>♪ &nbsp; TikTok</span><span>›</span></a>
+      <a class='social-link' href='https://www.youtube.com/'><span>▶ &nbsp; YouTube</span><span>›</span></a>
+      <a class='site' href='https://www.stereovk.blogspot.com/'>🌐 www.stereovk.blogspot.com ›</a>
+    </aside>
+  </main>
+
+  <section class='genrebar' id='generos'>
+    <div class='genreitem'><b>♫ SALSA</b><small>El mejor ritmo</small></div>
+    <div class='genreitem'><b>◉ AFRICANOS</b><small>Pura energía</small></div>
+    <div class='genreitem'><b>♫ VALLENATO</b><small>Nuestra tradición</small></div>
+    <div class='genreitem'><b>♬ MERENGUE</b><small>Para bailar</small></div>
+  </section>
+
+  <footer id='programacion'>
+    VK Radio • Barranquilla, Colombia •
+    <a href='© VK Radio · 2026 Todos los derechos reservados. | Política de Privacidad </a>
+    • Siempre contigo 24/7
+  </footer>
+
+  <!-- Sección requerida para la estructura de la plantilla Blogger -->
+  <b:section id='main' showaddelement='no' maxwidgets='1'></b:section>
+
+  <script type='text/javascript'>
+  //<![CDATA[
+  (function(){
+    var audio = document.getElementById('radioAudio');
+    var play = document.getElementById('playButton');
+    var topPlay = document.getElementById('topPlay');
+    var status = document.getElementById('status');
+    var volume = document.getElementById('volume');
+    var mute = document.getElementById('muteButton');
+
+    function playing(){
+      play.textContent = '❚❚';
+      topPlay.textContent = '❚❚';
+      status.textContent = '● Reproduciendo VK Radio en vivo';
+    }
+    function paused(){
+      play.textContent = '▶';
+      topPlay.textContent = '▶';
+      status.textContent = '● Pausado';
+    }
+    function toggle(){
+      if(audio.paused){
+        var promise = audio.play();
+        if(promise && promise.then){
+          promise.then(playing).catch(function(){
+            status.textContent = 'No se pudo conectar. Comprueba la señal de Zeno e inténtalo otra vez.';
+          });
+        }
+      }else{
+        audio.pause();
+        paused();
+      }
+    }
+    play.addEventListener('click',toggle);
+    topPlay.addEventListener('click',toggle);
+    volume.addEventListener('input',function(){
+      audio.volume = Number(volume.value);
+      audio.muted = audio.volume === 0;
+      mute.textContent = audio.muted ? '🔇' : '🔊';
+    });
+    mute.addEventListener('click',function(){
+      audio.muted = !audio.muted;
+      mute.textContent = audio.muted ? '🔇' : '🔊';
+    });
+    document.getElementById('restartButton').addEventListener('click',function(){
+      audio.pause();
+      paused();
+    });
+    document.getElementById('liveButton').addEventListener('click',function(){
+      if(audio.paused){toggle();}
+      else{status.textContent='● Estás escuchando la señal en vivo';}
+    });
+    audio.addEventListener('playing',playing);
+    audio.addEventListener('pause',function(){if(audio.paused){paused();}});
+    audio.volume = 0.8;
+
+    function makeBars(id,count){
+      var parent = document.getElementById(id);
+      for(var i=0;i<count;i++){
+        var bar = document.createElement('i');
+        bar.style.height = (10 + Math.random()*85) + '%';
+        bar.style.animationDuration = (0.3 + Math.random()*0.7) + 's';
+        parent.appendChild(bar);
+      }
+    }
+    makeBars('topEq',55);
+    makeBars('miniEq',32);
+  })();
+  //]]>
+  </script>
+
+</body>
+</html>
